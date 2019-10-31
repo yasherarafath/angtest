@@ -1,31 +1,12 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h6>
-    Welcome to {{ title }}!
-  </h6>
-  
-  <nav> 
-    <a routerLink = "/home">Home</a> 
-    <a routerLink = "/contactus">Contact Us </a> 
-  </nav>
-
-  <h6 appChangeText>
-    Welcome too {{ title }}!
-  </h6>
-</div>
-<router-outlet></router-outlet>
 <app-test></app-test>
+<router-outlet></router-outlet>
 
-<div> Months : 
-  <select (change) = "countrychange($event)" name = "month"> 
-     <option *ngFor = "let i of months">{{i}}</option> 
-  </select> 
-</div> 
-<br/>
+<h3>Users Data</h3>
+<ul>
+   <li *ngFor="let item of persondata; let i = index">
+        {{item.name}}
+   </li>
+</ul>
 
-<div> 
-  <span *ngIf = "isavailable; then condition1 else condition2"></span>
-  <ng-template #condition1>Condition is valid</ng-template> 
-  <ng-template #condition2>Condition is invalid</ng-template> 
-</div>
-<button (click) = "buttonclick($event)">Click Me</button>
+
+
