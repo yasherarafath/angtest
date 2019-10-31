@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+// import { ChangeTextDirective } from '../change-text.directive';
 
 @Component({
   selector: 'app-test',
