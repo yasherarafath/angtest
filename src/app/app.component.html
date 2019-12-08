@@ -1,12 +1,34 @@
-<app-test></app-test>
+<nav>
+    <a routerLink="/">Landing</a>
+    <a routerLink="/home">Home</a>
+    <a routerLink="/contactus">Contact Us </a>
+</nav>
 <router-outlet></router-outlet>
 
-<h3>Users Data</h3>
+
+<div> 
+    <form [formGroup] = "formdata" (ngSubmit) = "onClickSubmit(formdata.value)" > 
+       <input type = "text" class = "fortextbox" name = "emailid" placeholder = "emailid" 
+          formControlName = "emailid"> 
+       <br/> 
+       
+       <input type = "password" class = "fortextbox" name = "passwd" 
+          placeholder = "passwd" formControlName = "passwd"> 
+       <br/>
+       
+       <input [disabled] = "!formdata.valid" type = "submit" class = "forsubmit" value = "Log In" > 
+    </form>
+ </div> 
+ <p> Email entered is : {{emailid}} </p>
+ <p> values : {{formvalues | json}} </p>
+
+
+<!-- <h3>Users Data</h3>
 <ul>
    <li *ngFor="let item of persondata; let i = index">
         {{item.name}}
    </li>
-</ul>
+</ul> -->
 
 
 

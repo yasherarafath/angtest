@@ -11,4 +11,10 @@ export class TestserviceService {
   getData() {
      return this.http.get(this.apiurl);
   }
+
+  showTodayDate(){
+    return new Date();
+  }
+
+  
 }
